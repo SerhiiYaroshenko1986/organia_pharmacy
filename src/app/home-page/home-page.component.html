@@ -1,0 +1,95 @@
+<!-- header.component.html -->
+<header class="sticky top-0 z-50 bg-green-700 text-white shadow-md">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+    
+    <!-- Лого -->
+    <div class="flex items-center space-x-3">
+      <img src="assets/logo.png" alt="OrganiaPharm" class="h-10 w-auto" />
+      <span class="font-bold text-xl tracking-wide">OrganiaPharm</span>
+    </div>
+    <!-- Мова та Місто -->
+    <div class="flex items-center space-x-4">
+      <select class="bg-green-600 hover:bg-green-500 px-3 py-1 rounded-md focus:outline-none">
+        <option value="ua">UA</option>
+        <option value="en">EN</option>
+      </select>
+      <select class="bg-green-600 hover:bg-green-500 px-3 py-1 rounded-md focus:outline-none">
+        <option>Київ</option>
+        <option>Івано-Франківськ</option>
+        <option>Луцьк</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-green-50 py-16 px-6 text-center">
+   <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+      Виробництво якісних та доступних ліків — <span class="text-green-700">OrganiaPharm</span>
+   </h1>
+   <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+      Ми поєднуємо сучасні технології, контроль якості та доступність для кожного.
+   </p>
+   <div class="max-w-xl mx-auto flex bg-white shadow-lg rounded-full overflow-hidden">
+      <input type="text" placeholder="Пошук ліків, категорій або брендів..." class="flex-grow px-6 py-3 outline-none" />
+      <button class="bg-green-700 text-white px-6 font-semibold">Знайти</button>
+   </div>
+</section>
+<!-- popular-categories.component.html -->
+<div class="flex justify-center gap-10 py-6 bg-gray-100 flex-wrap">
+  <div 
+    *ngFor="let cat of categories"
+    class="flex flex-col items-center cursor-pointer transform transition-transform hover:scale-110"
+  >
+    <mat-icon class="text-green-600 text-3xl">{{ cat.icon }}</mat-icon>
+    <span class="mt-2 text-sm font-medium text-gray-700">{{ cat.name }}</span>
+  </div>
+</div>
+
+<!-- About Production -->
+<section class="bg-green-50 py-16 px-6">
+   <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Власне виробництво</h2>
+      <p class="text-lg text-gray-600 mb-8">
+         OrganiaPharm створює ліки відповідно до міжнародних стандартів GMP. Ми забезпечуємо повний цикл виробництва — від розробки формули до фасування.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+         <div class="bg-white p-6 rounded-xl shadow">
+            <h3 class="font-bold text-green-700 mb-3">Контроль якості</h3>
+            <p class="text-gray-600 text-sm">Кожен етап виробництва проходить суворий лабораторний контроль.</p>
+         </div>
+         <div class="bg-white p-6 rounded-xl shadow">
+            <h3 class="font-bold text-green-700 mb-3">Сучасні технології</h3>
+            <p class="text-gray-600 text-sm">Використовуємо інноваційне обладнання для збереження ефективності.</p>
+         </div>
+         <div class="bg-white p-6 rounded-xl shadow">
+            <h3 class="font-bold text-green-700 mb-3">Довіра лікарів</h3>
+            <p class="text-gray-600 text-sm">Ми співпрацюємо з лікарями для створення безпечних і дієвих препаратів.</p>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-200 py-10 px-6">
+   <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div>
+         <img src="assets/logo.png" alt="OrganiaPharm" class="h-10 mb-4" />
+         <p class="text-sm text-gray-400">© 2025 OrganiaPharm. Всі права захищено.</p>
+      </div>
+      <div>
+         <h3 class="font-semibold mb-3">Меню</h3>
+         <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-green-500">Каталог</a></li>
+            <li><a href="#" class="hover:text-green-500">Виробництво</a></li>
+            <li><a href="#" class="hover:text-green-500">Акції</a></li>
+            <li><a href="#" class="hover:text-green-500">Контакти</a></li>
+         </ul>
+      </div>
+      <div>
+         <h3 class="font-semibold mb-3">Контакти</h3>
+         <p class="text-sm text-gray-400">м. Київ, вул. Прикладна 12</p>
+         <p class="text-sm text-gray-400">+380 44 123 45 67</p>
+         <p class="text-sm text-gray-400">info&#64;organiapharm.ua</p>
+      </div>
+   </div>
+</footer>
